@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Activities</string>
+    <string name="hello" translatable="false">Hello Java Android!</string>
+    <string name="form_activity">Form Activity</string>
+</resources>

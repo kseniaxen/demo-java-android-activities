@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Активности</string>
+    <string name="hello" translatable="false">Привет Java Андроид!</string>
+    <string name="form_activity">Активность с формой</string>
+</resources>
