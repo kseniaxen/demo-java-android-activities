@@ -10,9 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/hello"/>
+    <EditText
+        android:id="@+id/mainMessageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/type_some_message_here"/>
     <Button
         android:id="@+id/mainActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Do action"/>
+        android:text="@string/do_action"/>
 </LinearLayout>

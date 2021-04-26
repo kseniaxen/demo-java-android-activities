@@ -2,4 +2,6 @@
     <string name="app_name">Activities</string>
     <string name="hello" translatable="false">Hello Java Android!</string>
     <string name="form_activity">Form Activity</string>
+    <string name="type_some_message_here">Type some message here</string>
+    <string name="do_action">Do action</string>
 </resources>
