@@ -11,11 +11,16 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String MESSAGE_EXTRA = "message";
+    public static final int FORM_ACTIVITY_REQUEST_CODE = 0;
+    public static final int FORM_ACTIVITY_2_REQUEST_CODE = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button actionButton = findViewById(R.id.mainActionButton);
+        Button action2Button = findViewById(R.id.mainAction2Button);
         /* actionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,9 +42,17 @@ public class MainActivity extends AppCompatActivity {
                 v -> {
                     Intent intent = new Intent(MainActivity.this, FormActivity.class);
                     EditText messageEditText = findViewById(R.id.mainMessageEditText);
-                    intent.putExtra("message", messageEditText.getText().toString());
+                    intent.putExtra(MESSAGE_EXTRA, messageEditText.getText().toString());
                     // startActivity(intent);
-                    startActivityForResult(intent, 0);
+                    startActivityForResult(intent, FORM_ACTIVITY_REQUEST_CODE);
+                }
+        );
+        action2Button.setOnClickListener(
+                v -> {
+                    Intent intent = new Intent(MainActivity.this, Form2Activity.class);
+                    EditText messageEditText = findViewById(R.id.mainMessageEditText);
+                    intent.putExtra(MESSAGE_EXTRA, messageEditText.getText().toString());
+                    startActivityForResult(intent, FORM_ACTIVITY_2_REQUEST_CODE);
                 }
         );
     }
@@ -49,11 +62,19 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         System.out.println("MyDebug: MainActivity Start");
         System.out.println("data = " + data);
-        if (data != null && data.hasExtra("feedback")) {
-            System.out.println("data.hasExtra(\"feedback\") = " + data.hasExtra("feedback"));
+        if (resultCode == RESULT_OK && data != null && data.hasExtra(FormActivity.FEEDBACK_EXTRA)) {
+            System.out.println("data.hasExtra(\"feedback\") = " + data.hasExtra(FormActivity.FEEDBACK_EXTRA));
+            String result = "";
+            if (requestCode == FORM_ACTIVITY_REQUEST_CODE) {
+                result = "Feedback text: " +
+                        data.getStringExtra(FormActivity.FEEDBACK_EXTRA);
+            } else if (requestCode == FORM_ACTIVITY_2_REQUEST_CODE) {
+                result = "Feedback text length: " +
+                        data.getIntExtra(FormActivity.FEEDBACK_EXTRA, 0);
+            }
             Toast.makeText(
                     MainActivity.this,
-                    data.getStringExtra("feedback"),
+                    result,
                     Toast.LENGTH_LONG
             ).show();
         }

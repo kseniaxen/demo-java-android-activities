@@ -20,4 +20,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/do_action"/>
+    <Button
+        android:id="@+id/mainAction2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/do_action"/>
 </LinearLayout>
