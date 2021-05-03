@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FormActivity"
+    tools:context=".DetailsActivity"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/form_activity"/>
-    <EditText
-        android:id="@+id/formMessageEditText"
+        android:text="@string/details_activity"/>
+    <TextView
+        android:id="@+id/detailsTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/type_some_message_here"/>
-    <Button
-        android:id="@+id/detailsActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/details"/>
+        android:textSize="20dp"/>
+
 </LinearLayout>

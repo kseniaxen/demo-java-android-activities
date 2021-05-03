@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Activities">
         <activity
+            android:name=".DetailsActivity"
+            android:exported="true"/>
+        <activity
             android:name=".FormActivity"
             android:exported="true" />
         <activity

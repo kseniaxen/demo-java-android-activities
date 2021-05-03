@@ -5,4 +5,6 @@
     <string name="form_activity">Активность с формой</string>
     <string name="type_some_message_here">Наберите здесь какое-то сообщение</string>
     <string name="do_action">Действовать</string>
+    <string name="details_activity">Активность с деталями</string>
+    <string name="details">Детали</string>
 </resources>

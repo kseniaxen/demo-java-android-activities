@@ -4,4 +4,6 @@
     <string name="form_activity">Form Activity</string>
     <string name="type_some_message_here">Type some message here</string>
     <string name="do_action">Do action</string>
+    <string name="details_activity">Details Activity</string>
+    <string name="details">Details</string>
 </resources>
